@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Histórico y Geopolítico de la Hispanidad</title>
+    
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fuentes Tipográficas Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap">
+
+    <style>
+        /* ESTILOS GLOBALES Y VARIABLES */
+        :root {
+            --carmesi: #8a1c28;
+            --carmesi-oscuro: #4a0d14;
+            --dorado: #d4af37;
+            --dorado-brillo: #f3b61f;
+            --fondo-pagina: #f5f2eb;
+            --fondo-tarjeta: #ffffff;
+            --texto-principal: #1f1a1b;
+            --texto-suave: #5e5254;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--fondo-pagina);
+            color: var(--texto-principal);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* ENCABEZADO MONUMENTAL SIN CLASES */
+        header {
+            background: linear-gradient(135deg, var(--carmesi-oscuro) 0%, var(--carmesi) 100%);
+            color: #ffffff;
+            padding: 90px 20px 70px 20px;
+            text-align: center;
+            border-bottom: 6px solid var(--dorado-brillo);
+            box-shadow: 0 10px 30px rgba(74, 13, 20, 0.3);
+            position: relative;
+        }
+
+        header i {
+            font-size: 3.5em;
+            color: var(--dorado-brillo);
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+        }
+
+        header h1 {
+            font-family: 'Cinzel', Georgia, serif;
+            font-size: 3em;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.25em;
+            color: #ffe8b3;
+            font-weight: 500;
+        }
+
+        /* BARRA DE NAVEGACIÓN FLOTANTE SIN CLASES */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(44, 12, 15, 0.95);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            border-bottom: 2px solid var(--dorado-brillo);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff8e7;
+            padding: 18px 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: linear-gradient(135deg, #ffe082 0%, var(--dorado-brillo) 100%);
+            color: var(--carmesi-oscuro);
+            transform: translateY(-2px);
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* SECCIONES ESTILIZADAS COMO TARJETAS ELEGANTES */
+        main > section {
+            background: var(--fondo-tarjeta);
+            margin-bottom: 45px;
+            padding: 45px;
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(74, 13, 20, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        main > section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--carmesi) 0%, var(--dorado-brillo) 100%);
+            border-radius: 16px 16px 0 0;
+        }
+
+        main > section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(74, 13, 20, 0.12);
+        }
+
+        h2 {
+            font-family: 'Cinzel', Georgia, serif;
+            color: var(--carmesi);
+            font-size: 2.1em;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 i {
+            color: var(--dorado-brillo);
+        }
+
+        /* RESUMEN CON DESTACADO EDITORIAL */
+        main > section:first-of-type p {
+            background: linear-gradient(135deg, #fffcf5 0%, #fdf5e6 100%);
+            border-left: 6px solid var(--dorado-brillo);
+            padding: 25px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            box-shadow: inset 0 0 10px rgba(243, 182, 31, 0.05);
+        }
+
+        /* LISTAS CON DISEÑO DE TARJETAS FLOTANTES */
+        ul {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 16px;
+            background: #fcfbfa;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #efe8da;
+            transition: all 0.3s ease;
+        }
+
+        ul li:hover {
+            background: #ffffff;
+            transform: translateX(8px);
+            border-color: var(--dorado-brillo);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+        }
+
+        ul li strong {
+            color: var(--carmesi);
+            font-size: 1.05em;
+        }
+
+        /* TABLA COMPARATIVA CON DEGRADADO */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--carmesi-oscuro) 0%, var(--carmesi) 100%);
+            color: #ffffff;
+            font-family: 'Cinzel', Georgia, serif;
+            padding: 18px;
+            text-align: left;
+            font-size: 1.05em;
+        }
+
+        td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #f0e9dd;
+            color: var(--texto-suave);
+        }
+
+        td strong {
+            color: var(--carmesi);
+        }
+
+        tr:hover {
+            background-color: #fdf8ed;
+        }
+
+        /* REPRODUCTOR MULTIMEDIA ELEGANTE */
+        video {
+            width: 100%;
+            max-width: 850px;
+            display: block;
+            margin: 25px auto 10px auto;
+            border-radius: 12px;
+            border: 3px solid var(--carmesi-oscuro);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        /* GALERÍA DE TARJETAS VISUALES */
+        main > section:nth-of-type(5) > div {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        main > section:nth-of-type(5) > div > div {
+            flex: 1 1 calc(50% - 20px);
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #eee4d0;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        main > section:nth-of-type(5) > div > div:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: var(--dorado-brillo);
+        }
+
+        main > section:nth-of-type(5) img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--carmesi);
+        }
+
+        main > section:nth-of-type(5) p {
+            margin-top: 12px;
+            font-weight: 600;
+            color: var(--carmesi);
+        }
+
+        /* GUÍA DE ETIQUETAS TIPO BADGES */
+        main > section:last-of-type > div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        main > section:last-of-type > div > div {
+            background: #fdfbf7;
+            border: 1px solid #ebdcb8;
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        main > section:last-of-type > div > div:hover {
+            background: #ffffff;
+            border-color: var(--dorado-brillo);
+            box-shadow: 0 4px 15px rgba(243, 182, 31, 0.2);
+        }
+
+        main > section:last-of-type span {
+            font-family: monospace;
+            font-weight: 700;
+            color: var(--carmesi-oscuro);
+            background: linear-gradient(135deg, #ffe082 0%, var(--dorado-brillo) 100%);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            display: inline-block;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background: var(--carmesi-oscuro);
+            color: var(--dorado-brillo);
+            text-align: center;
+            padding: 45px 20px;
+            border-top: 4px solid var(--dorado-brillo);
+            font-size: 0.95em;
+        }
+
+        footer p {
+            font-weight: 600;
+        }
+
+        /* ADAPTACIÓN MÓVIL */
+        @media screen and (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            nav ul li { display: block; border-bottom: 1px solid rgba(255,255,255,0.05); }
+            main > section:nth-of-type(5) > div > div { flex: 1 1 100%; }
+            main { padding: 0 10px; }
+            main > section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Semántico -->
+    <header>
+        <i class="fa-solid fa-shield-halved"></i>
+        <h1>Análisis Histórico y Geopolítico</h1>
+        <p>La Hispanidad frente a la Fragmentación y el Poder Global</p>
+    </header>
+
+    <!-- Navegación Fija sin clases -->
+    <nav>
+        <ul>
+            <li><a href="#resumen"><i class="fa-solid fa-bookmark"></i> Resumen</a></li>
+            <li><a href="#caida"><i class="fa-solid fa-crown"></i> Caída del Imperio</a></li>
+            <li><a href="#modelos"><i class="fa-solid fa-scale-balanced"></i> Modelos</a></li>
+            <li><a href="#video"><i class="fa-solid fa-circle-play"></i> Documental</a></li>
+            <li><a href="#galeria"><i class="fa-solid fa-map"></i> Esquemas</a></li>
+            <li><a href="#explicacion"><i class="fa-solid fa-code"></i> Guía HTML5</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main>
+
+        <!-- Sección Resumen -->
+        <section id="resumen">
+            <h2><i class="fa-solid fa-scroll"></i> Resumen Ejecutivo</h2>
+            <p>
+                El presente análisis sintetiza la situación de fragmentación de Hispanoamérica como consecuencia de la caída del Imperio Español a inicios del siglo XIX. Un proceso impulsado por debilidades internas, la traición de élites criollas y la estrategia geopolítica del Imperio Británico. Se plantea que la independencia derivó en un cambio trascendental: de una monarquía universal civilizadora a naciones endeudadas y subordinadas a intereses anglosajones.
+            </p>
+        </section>
+
+        <!-- Sección Caída del Imperio -->
+        <section id="caida">
+            <h2><i class="fa-solid fa-monument"></i> 1. La Caída del Imperio Español y la Traición Criolla</h2>
+            <p>
+                La desintegración del Imperio no fue un progreso natural, sino el resultado de una prolongada confrontación geopolítica:
+            </p>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-chess-knight" style="color: #8a1c28; font-size: 1.4em;"></i>
+                    <div>
+                        <strong>Estrategia Británica:</strong>
+                        <p>Uso sistemático de la "leyenda negra" e infiltración para promover el "divide y vencerás".</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user-ninja" style="color: #8a1c28; font-size: 1.4em;"></i>
+                    <div>
+                        <strong>Papel de las Élites:</strong>
+                        <p>Acción de grupos criollos y logias alineadas directamente con intereses extranjeros.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-coins" style="color: #8a1c28; font-size: 1.4em;"></i>
+                    <div>
+                        <strong>Consecuencias:</strong>
+                        <p>Nacimiento de repúblicas fragmentadas, endeudadas y con pérdida de soberanía territorial.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sección Modelos Comparativos -->
+        <section id="modelos">
+            <h2><i class="fa-solid fa-balance-scale"></i> 2. Modelos en Conflicto: Imperio vs. Imperialismo</h2>
+            <p>Diferencias fundamentales entre el modelo integrador hispano y el modelo extractivo anglosajón:</p>
+            
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Imperio Español (Monarquía Universal)</th>
+                            <th>Imperialismo Anglosajón</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Propósito</strong></td>
+                            <td>Construir civilización y evangelizar.</td>
+                            <td>Extracción de recursos y dominio comercial.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Relación Local</strong></td>
+                            <td>Mestizaje e integración cultural real.</td>
+                            <td>Segregación social y explotación.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Infraestructura</strong></td>
+                            <td>Universidades, hospitales y red de ciudades.</td>
+                            <td>Factorías, puertos y vías férreas extractivas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Economía</strong></td>
+                            <td>Moneda soberana global con valor intrínseco (Real de a 8).</td>
+                            <td>Sistema de deuda externa y capital transnacional.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección Video -->
+        <section id="video">
+            <h2><i class="fa-solid fa-film"></i> 3. Documental Corto: El Real de a Ocho</h2>
+            <p>El Real de a 8 fue la primera divisa global con valor intrínseco, respaldada por la riqueza minera hispanoamericana.</p>
+            
+            <video controls poster="media/real_de_a_ocho_poster.jpg">
+                <source src="media/video_real_de_a_ocho.mp4" type="video/mp4">
+                Tu navegador no soporta el reproductor de video HTML5.
+            </video>
+        </section>
+
+        <!-- Sección Galería de Esquemas -->
+        <section id="galeria">
+            <h2><i class="fa-solid fa-images"></i> 4. Galería de Esquemas y Mapas Conceptuales</h2>
+            <p>Esquemas conceptuales del análisis geopolítico e histórico:</p>
+            
+            <div>
+                <div>
+                    <img src="https://www.eleconomista.es/opinion/noticias/13231567/02/25/geopolitica-en-un-mundo-fragmentado-desafios-y-oportunidades-para-la-cooperacion-internacional.html" alt="Mapa Mental sobre la Decadencia de la Hispanidad">
+                    <p>Mapa Mental: Fragmentación y Geopolítica</p>
+                </div>
+                <div>
+                    <img src="media/real_de_a_ocho_moneda.jpg" alt="Moneda Real de a Ocho">
+                    <p>El Real de a 8: Moneda Global</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explicación de Etiquetas HTML5 -->
+        <section id="explicacion">
+            <h2><i class="fa-solid fa-code"></i> 5. Guía Explicativa de Etiquetas HTML5</h2>
+            
+            <div>
+                <div>
+                    <span>&lt;header&gt;</span>
+                    <p>Encabezado semántico que alberga los títulos principales y la identidad visual.</p>
+                </div>
+                <div>
+                    <span>&lt;nav&gt;</span>
+                    <p>Define la estructura del menú flotante de navegación interna.</p>
+                </div>
+                <div>
+                    <span>&lt;main&gt;</span>
+                    <p>Contenedor semántico reservado para el contenido central del documento.</p>
+                </div>
+                <div>
+                    <span>&lt;section&gt;</span>
+                    <p>Subdivide la página en tarjetas temáticas e independientes.</p>
+                </div>
+                <div>
+                    <span>&lt;table&gt;</span>
+                    <p>Organiza datos complejos de forma clara en columnas y filas.</p>
+                </div>
+                <div>
+                    <span>&lt;video&gt;</span>
+                    <p>Incrusta contenido audiovisual nativo sin librerías externas.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p><i class="fa-solid fa-globe"></i> &copy; 2026 Plataforma de Análisis Geopolítico - Hispanidad y Futuro Global</p>
+    </footer>
+
+</body>
+</html>
